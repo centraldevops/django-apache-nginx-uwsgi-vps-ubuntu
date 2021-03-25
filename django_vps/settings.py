@@ -6,7 +6,7 @@ SECRET_KEY = 'podvin0bihkvk!qv38d@aeev(i7ti=(l_s)u!+!y3y96jpfyj6'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.126.8','127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -49,11 +49,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'django_vps.wsgi.application'
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'db_site',
+        'USER': 'usr_app',
+        'PASSWORD': '123mudar',
+        'HOST': '192.168.126.128',
+        'PORT': '5432',
+        
+        }        
+        
+        }
 
 AUTH_PASSWORD_VALIDATORS = [
     {
